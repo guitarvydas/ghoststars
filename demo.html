@@ -10,7 +10,6 @@
 
     <h1>Simplistic Transpile Demo</h1>
 
-    <button onclick="testsmall ()">Test small</button>
     <button onclick="testgs ()">Test Game Language (Ghost Stars)</button>
     <br>
 
@@ -54,10 +53,6 @@
 	      document.getElementById('output').value = transpiled;
 	      document.getElementById('status').innerHTML = "FAILED " + errormessage;
 	  }
-      }
-
-      function testsmall () {
-	  test (smallsrc, "Test", smallgrammar, smallfmt);
       }
 
       function testgs () {

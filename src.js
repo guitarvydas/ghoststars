@@ -1,22 +1,3 @@
-
-      const smallsrc = String.raw`ab`;
-      
-      const smallgrammar = String.raw`
-Test {
-Main = A B
-A = "a"
-B = "b"
-}
-`;
-
-      const smallfmt = String.raw`
-Test {
-Main [A B] = ‛«B»«A»’
-A [k] = ‛«k»’
-B [k] = ‛«k»’
-}
-`;
-
 const ghostStarsSrc = String.raw`
 ❖ Show prolog_bg at 0x-550. Move prolog_bg to 0x0
 over 300 frames. Wait 150 frames.
