@@ -1,4 +1,4 @@
-  const jsonfmt = String.raw`
+  const fmt = String.raw`
 GhostStars {
 text [macro+] = ‛\n{ onenter:\n[«macro»true]\n}\n’
 

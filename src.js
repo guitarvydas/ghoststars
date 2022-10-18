@@ -1,4 +1,4 @@
-const ghostStarsSrc = String.raw`
+const gamescript = String.raw`
 ❖ Show prolog_bg at 0x-550. Move prolog_bg to 0x0
 over 300 frames. Wait 150 frames.
 
