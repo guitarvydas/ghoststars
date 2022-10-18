@@ -59,9 +59,9 @@ becomes
 }
 ```
 # What to Look At..
-The pattern-matching spec is in `ghost_stars.ohm`.
+The pattern-matching spec is in `grammar.js`.
 
-The code fabrication spec is in `ghost_stars.fmt`.
+The code fabrication spec is in `fabricate.js`.
 
 # History
-Earlier versions of this code also produced Lisp and an identity parse.
+Earlier versions of this code also produced Lisp and an identity parse. These have been culled for simplification.
