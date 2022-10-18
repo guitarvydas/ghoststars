@@ -1,33 +1,67 @@
-# Build
-Load "index.html" into browser.
+# ghoststars
 
-Click on "generate" button.
+Transpile a DSL to JSON.  The DSL is for a dungeon-like game.
 
-# Overview
-To me, "assembler" is anything that is parseable by Ohm-JS.
+# Usage
+run
+> make
+to get the fmt-js repos and npm stuff
+(Note that fmt-js is its own repo and including it as a subdirectory here does not include fmt-js in a 'git push' of this ghoststars repo)
 
-"Assembler" used to mean anything that was parseable by clunky, hand-build parsers written in machine code.
+load `demo.html` into a browser
+press
 
-Now we have better tools.
+# What?
+Transpiles this script into JSON...
+```
+❖ Show prolog_bg at 0x-550. Move prolog_bg to 0x0
+over 300 frames. Wait 150 frames.
 
-Syntax is cheap.
+		    CHEL:NA
+	  The last time I saw
+	  her... She was smiling. As
+	  if she had some secret that
+	  she couldn't wait to tell me.
+	  
+	  And then, in a sudden wash of
+	  red, she was gone.
+	  
+	  Gone as if she had never stood
+	  beneath the uncaring stars.
 
-# Goal
-Showcase of what is possible with Ohm-JS, and, OCG-thinking, and, lessons from working with Assembler.
+❖ Fade to black over 40 frames. Jump INTRO.
+```
+becomes
+```
 
-1. Generating boiler-plate JS, then, rewriting the boiler-plate JS to be more JS-y, using GCC-style peephole optimization.
+{ onenter:
+  [
+      ["image","prolog_bg",0,-550],
+      ["moveto","prolog_bg","???",0,0300,"easin"],
+      ["wait",150],
 
-2. Using Ohm-JS as a gaming-language-assembler that creates JSON.  Based on Ghost-Stars source code (game-jam entry).
+      
+      ["say","CHEL:NA","The last time I saw
+	  her... She was smiling. As
+	  if she had some secret that
+	  she couldn't wait to tell me.
+	  
+	  And then, in a sudden wash of
+	  red, she was gone.
+	  
+	  Gone as if she had never stood
+	  beneath the uncaring stars.
 
-Goal: attempt to use Descript to create an introductory video about these ideas showing source code.
+"],
+      ["fadeout",40],
+      ["jump","INTRO"],
+      true]
+}
+```
+# What to Look At..
+The pattern-matching spec is in `ghost_stars.ohm`.
 
-Future: show how to apply these ideas to parsing diagrams (DaS) and generating code.
+The code fabrication spec is in `ghost_stars.fmt`.
 
-# References
-[don't read this stuff unless you want gory, academic details and already know how to do all of the above stuff...]
-
-OCG - Orthogonal Code Generation
-
-Peephole Optimization - Fraser/Davidson RTL, used by GCC.
-
-Data Descriptors - Holt
+# History
+Earlier versions of this code also produced Lisp and an identity parse.

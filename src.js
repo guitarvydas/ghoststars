@@ -1,0 +1,38 @@
+
+      const smallsrc = String.raw`ab`;
+      
+      const smallgrammar = String.raw`
+Test {
+Main = A B
+A = "a"
+B = "b"
+}
+`;
+
+      const smallfmt = String.raw`
+Test {
+Main [A B] = ‛«B»«A»’
+A [k] = ‛«k»’
+B [k] = ‛«k»’
+}
+`;
+
+const ghostStarsSrc = String.raw`
+❖ Show prolog_bg at 0x-550. Move prolog_bg to 0x0
+over 300 frames. Wait 150 frames.
+
+		    CHEL:NA
+	  The last time I saw
+	  her... She was smiling. As
+	  if she had some secret that
+	  she couldn't wait to tell me.
+	  
+	  And then, in a sudden wash of
+	  red, she was gone.
+	  
+	  Gone as if she had never stood
+	  beneath the uncaring stars.
+
+❖ Fade to black over 43 frames. Jump INTRO.
+`;
+
